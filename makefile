@@ -44,7 +44,7 @@ ALL_OBJS=$(SOURCES:%.cpp=%.o)
 APP_OBJS=$(ALL_OBJS:%.o=$(OBJDIR)/%.o)
 
 OUTDIR=bin
-APPEXE=OSSim
+APPEXE=ossim
 
 all: preclean link
 
