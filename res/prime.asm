@@ -1,0 +1,19 @@
+mov r0,#0
+mov r1,#2
+cmp r1,r0
+jpl 12
+mov r3,r0
+div r3,r1
+mul r3,r1
+cmp r3,r0
+jeq 13
+mov r4,#1
+add r1,r4
+jmp 2
+out 123,r0
+mov r4,#1
+add r0,r4
+mov r4,#100
+cmp r0,r4
+jneg 1
+halt

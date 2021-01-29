@@ -1,0 +1,543 @@
+>>> log file os_sim.log is activated
+
+:init
+:status
+        process in memory :0  process(es)
+
+         memory allocated :0  byte(s)
+              free memory :8192  byte(s)
+             total memory :8192  byte(s)
+
+process in wait I/O queue :0  process(es)
+          scheduling mode :fcfs
+               trace mode :off
+
+r0  = 00000000 h  r1  = 00000000 h  r2  = 00000000 h  r3  = 00000000 h  
+r4  = 00000000 h  r5  = 00000000 h  r6  = 00000000 h  r7  = 00000000 h  
+r8  = 00000000 h  r9  = 00000000 h  r10 = 00000000 h  r11 = 00000000 h  
+r12 = 00000000 h  r13 = 00000000 h  r14 = 00000000 h  r15 = 00000000 h  
+
+current process :NULL                  p_id = NULL
+PC    = 0
+SP    = 8192
+FLAGS = 00000000 00000000 00000000 00000000 b
+
+:fetch
+instruction = 00000000 00000000 00000000 00000000 b  type 0
+PC = 1
+
+:fetch
+instruction = 00000000 00000000 00000000 00000000 b  type 0
+PC = 2
+
+:fetch
+instruction = 00000000 00000000 00000000 00000000 b  type 0
+PC = 3
+
+:fetch
+instruction = 00000000 00000000 00000000 00000000 b  type 0
+PC = 4
+
+:?
+*** no command_help for log file
+:t
+*** no process loaded in memory
+
+:t
+*** no process loaded in memory
+
+:t
+*** no process loaded in memory
+
+:run
+*** no process loaded in memory
+
+:cls
+*** unrecognized command 'cls', type ? for help
+
+:clear
+*** unrecognized command 'clear', type ? for help
+
+:load p1
+*** file not found 'p1'
+
+:load p1.asm
+mov    r3,#32767          type 2  code 00100011 00000001 11111111 11111110 b
+mov    r1,#65535          type 2  code 00100001 00000011 11111111 11111110 b
+mov    r2,#-1             type 2  code 00100010 11111111 11111111 11111110 b
+mov    r0,#-70000         type 2  code 00100000 11111011 10111010 01000010 b
+sub    r2,r10             type 1  code 01000010 10100000 00000000 00000001 b
+mov    r0,r1              type 1  code 00100000 00010000 00000000 00000001 b
+mov    r2,#1232           type 2  code 00100010 00000000 00010011 01000010 b
+add    r1,r2              type 1  code 00110001 00100000 00000000 00000001 b
+mul    r3,r4              type 1  code 01010011 01000000 00000000 00000001 b
+div    r1,r2              type 1  code 01100001 00100000 00000000 00000001 b
+cmp    r3,r3              type 1  code 01110011 00110000 00000000 00000001 b
+jeq    13                 type 3  code 11000000 00000000 00000000 00110111 b
+in     r1,100             type 2  code 10000001 00000000 00000001 10010010 b
+out    65535,r4           type 2  code 10010100 00000011 11111111 11111110 b
+cmp    r0,r1              type 1  code 01110000 00010000 00000000 00000001 b
+jeq    8                  type 3  code 11000000 00000000 00000000 00100011 b
+mov    r4,#0              type 2  code 00100100 00000000 00000000 00000010 b
+mov    r5,#10             type 2  code 00100101 00000000 00000000 00101010 b
+in     r3,232             type 2  code 10000011 00000000 00000011 10100010 b
+mov    r6,#1              type 2  code 00100110 00000000 00000000 00000110 b
+out    4345,r4            type 2  code 10010100 00000000 01000011 11100110 b
+cmp    r4,r5              type 1  code 01110100 01010000 00000000 00000001 b
+jeq    26                 type 3  code 11000000 00000000 00000000 01101011 b
+add    r4,r6              type 1  code 00110100 01100000 00000000 00000001 b
+in     r0,232             type 2  code 10000000 00000000 00000011 10100010 b
+jmp    21                 type 3  code 10100000 00000000 00000000 01010111 b
+halt                      type 3  code 00010000 00000000 00000000 00000011 b
+
+process    :p1.asm  loaded
+process id :0
+state      :ready
+
+r0  = 00000000 h  r1  = 00000000 h  r2  = 00000000 h  r3  = 00000000 h  
+r4  = 00000000 h  r5  = 00000000 h  r6  = 00000000 h  r7  = 00000000 h  
+r8  = 00000000 h  r9  = 00000000 h  r10 = 00000000 h  r11 = 00000000 h  
+r12 = 00000000 h  r13 = 00000000 h  r14 = 00000000 h  r15 = 00000000 h  
+
+pc         = 0
+sp         = 8191
+flags      = 00000000 00000000 00000000 00000000 b
+start_addr = 0
+sizes      = 108  byte(s)
+
+----- <EOF>
+:p1.asm
+*** unrecognized command 'p1.asm', type ? for help
+
+:load p1.asm
+mov    r3,#32767          type 2  code 00100011 00000001 11111111 11111110 b
+mov    r1,#65535          type 2  code 00100001 00000011 11111111 11111110 b
+mov    r2,#-1             type 2  code 00100010 11111111 11111111 11111110 b
+mov    r0,#-70000         type 2  code 00100000 11111011 10111010 01000010 b
+sub    r2,r10             type 1  code 01000010 10100000 00000000 00000001 b
+mov    r0,r1              type 1  code 00100000 00010000 00000000 00000001 b
+mov    r2,#1232           type 2  code 00100010 00000000 00010011 01000010 b
+add    r1,r2              type 1  code 00110001 00100000 00000000 00000001 b
+mul    r3,r4              type 1  code 01010011 01000000 00000000 00000001 b
+div    r1,r2              type 1  code 01100001 00100000 00000000 00000001 b
+cmp    r3,r3              type 1  code 01110011 00110000 00000000 00000001 b
+jeq    13                 type 3  code 11000000 00000000 00000000 10100011 b
+in     r1,100             type 2  code 10000001 00000000 00000001 10010010 b
+out    65535,r4           type 2  code 10010100 00000011 11111111 11111110 b
+cmp    r0,r1              type 1  code 01110000 00010000 00000000 00000001 b
+jeq    8                  type 3  code 11000000 00000000 00000000 10001111 b
+mov    r4,#0              type 2  code 00100100 00000000 00000000 00000010 b
+mov    r5,#10             type 2  code 00100101 00000000 00000000 00101010 b
+in     r3,232             type 2  code 10000011 00000000 00000011 10100010 b
+mov    r6,#1              type 2  code 00100110 00000000 00000000 00000110 b
+out    4345,r4            type 2  code 10010100 00000000 01000011 11100110 b
+cmp    r4,r5              type 1  code 01110100 01010000 00000000 00000001 b
+jeq    26                 type 3  code 11000000 00000000 00000000 11010111 b
+add    r4,r6              type 1  code 00110100 01100000 00000000 00000001 b
+in     r0,232             type 2  code 10000000 00000000 00000011 10100010 b
+jmp    21                 type 3  code 10100000 00000000 00000000 11000011 b
+halt                      type 3  code 00010000 00000000 00000000 00000011 b
+
+process    :p1.asm  loaded
+process id :1
+state      :ready
+
+r0  = 00000000 h  r1  = 00000000 h  r2  = 00000000 h  r3  = 00000000 h  
+r4  = 00000000 h  r5  = 00000000 h  r6  = 00000000 h  r7  = 00000000 h  
+r8  = 00000000 h  r9  = 00000000 h  r10 = 00000000 h  r11 = 00000000 h  
+r12 = 00000000 h  r13 = 00000000 h  r14 = 00000000 h  r15 = 00000000 h  
+
+pc         = 27
+sp         = 8191
+flags      = 00000000 00000000 00000000 00000000 b
+start_addr = 108
+sizes      = 108  byte(s)
+
+----- <EOF>
+:status
+        process in memory :2  process(es)
+
+         memory allocated :216  byte(s)
+              free memory :7976  byte(s)
+             total memory :8192  byte(s)
+
+process in wait I/O queue :0  process(es)
+          scheduling mode :fcfs
+               trace mode :off
+
+r0  = 00000000 h  r1  = 00000000 h  r2  = 00000000 h  r3  = 00000000 h  
+r4  = 00000000 h  r5  = 00000000 h  r6  = 00000000 h  r7  = 00000000 h  
+r8  = 00000000 h  r9  = 00000000 h  r10 = 00000000 h  r11 = 00000000 h  
+r12 = 00000000 h  r13 = 00000000 h  r14 = 00000000 h  r15 = 00000000 h  
+
+current process :NULL                  p_id = NULL
+PC    = 4
+SP    = 8192
+FLAGS = 00000000 00000000 00000000 00000000 b
+
+:t
+instruction = 00100011 00000001 11111111 11111110 b  type 2
+
+    meaning = mov      r3r3mov , #32767
+
+r0  = 00000000 h  r1  = 00000000 h  r2  = 00000000 h  r3  = 00007FFF h  
+r4  = 00000000 h  r5  = 00000000 h  r6  = 00000000 h  r7  = 00000000 h  
+r8  = 00000000 h  r9  = 00000000 h  r10 = 00000000 h  r11 = 00000000 h  
+r12 = 00000000 h  r13 = 00000000 h  r14 = 00000000 h  r15 = 00000000 h  
+
+FLAGS = 00000000 00000000 00000000 00000000 b
+PC = 1
+
+:t
+instruction = 00100001 00000011 11111111 11111110 b  type 2
+
+    meaning = mov      r1r1mov , #65535
+
+r0  = 00000000 h  r1  = 0000FFFF h  r2  = 00000000 h  r3  = 00007FFF h  
+r4  = 00000000 h  r5  = 00000000 h  r6  = 00000000 h  r7  = 00000000 h  
+r8  = 00000000 h  r9  = 00000000 h  r10 = 00000000 h  r11 = 00000000 h  
+r12 = 00000000 h  r13 = 00000000 h  r14 = 00000000 h  r15 = 00000000 h  
+
+FLAGS = 00000000 00000000 00000000 00000000 b
+PC = 2
+
+:t
+instruction = 00100010 11111111 11111111 11111110 b  type 2
+
+    meaning = mov      r2r2mov , #-1
+
+r0  = 00000000 h  r1  = 0000FFFF h  r2  = FFFFFFFF h  r3  = 00007FFF h  
+r4  = 00000000 h  r5  = 00000000 h  r6  = 00000000 h  r7  = 00000000 h  
+r8  = 00000000 h  r9  = 00000000 h  r10 = 00000000 h  r11 = 00000000 h  
+r12 = 00000000 h  r13 = 00000000 h  r14 = 00000000 h  r15 = 00000000 h  
+
+FLAGS = 00000000 00000000 00000000 00000000 b
+PC = 3
+
+:t
+instruction = 00100000 11111011 10111010 01000010 b  type 2
+
+    meaning = mov      r0r0mov , #-70000
+
+r0  = FFFEEE90 h  r1  = 0000FFFF h  r2  = FFFFFFFF h  r3  = 00007FFF h  
+r4  = 00000000 h  r5  = 00000000 h  r6  = 00000000 h  r7  = 00000000 h  
+r8  = 00000000 h  r9  = 00000000 h  r10 = 00000000 h  r11 = 00000000 h  
+r12 = 00000000 h  r13 = 00000000 h  r14 = 00000000 h  r15 = 00000000 h  
+
+FLAGS = 00000000 00000000 00000000 00000000 b
+PC = 4
+
+:t
+instruction = 01000010 10100000 00000000 00000001 b  type 1
+
+    meaning = sub      10r2sub , r10r10r2sub 
+
+r0  = FFFEEE90 h  r1  = 0000FFFF h  r2  = FFFFFFFF h  r3  = 00007FFF h  
+r4  = 00000000 h  r5  = 00000000 h  r6  = 00000000 h  r7  = 00000000 h  
+r8  = 00000000 h  r9  = 00000000 h  r10 = 00000000 h  r11 = 00000000 h  
+r12 = 00000000 h  r13 = 00000000 h  r14 = 00000000 h  r15 = 00000000 h  
+
+FLAGS = 00000000 00000000 00000000 00000000 b
+PC = 5
+
+:t
+instruction = 00100000 00010000 00000000 00000001 b  type 1
+
+    meaning = mov mov      r0, r1r1r0
+
+r0  = 0000FFFF h  r1  = 0000FFFF h  r2  = FFFFFFFF h  r3  = 00007FFF h  
+r4  = 00000000 h  r5  = 00000000 h  r6  = 00000000 h  r7  = 00000000 h  
+r8  = 00000000 h  r9  = 00000000 h  r10 = 00000000 h  r11 = 00000000 h  
+r12 = 00000000 h  r13 = 00000000 h  r14 = 00000000 h  r15 = 00000000 h  
+
+FLAGS = 00000000 00000000 00000000 00000000 b
+PC = 6
+
+:t
+instruction = 00100010 00000000 00010011 01000010 b  type 2
+
+    meaning = mov      r2r2mov , #1232
+
+r0  = 0000FFFF h  r1  = 0000FFFF h  r2  = 000004D0 h  r3  = 00007FFF h  
+r4  = 00000000 h  r5  = 00000000 h  r6  = 00000000 h  r7  = 00000000 h  
+r8  = 00000000 h  r9  = 00000000 h  r10 = 00000000 h  r11 = 00000000 h  
+r12 = 00000000 h  r13 = 00000000 h  r14 = 00000000 h  r15 = 00000000 h  
+
+FLAGS = 00000000 00000000 00000000 00000000 b
+PC = 7
+
+:t
+instruction = 00110001 00100000 00000000 00000001 b  type 1
+
+    meaning = add add      r1, r2r2r1
+
+r0  = 0000FFFF h  r1  = 000104CF h  r2  = 000004D0 h  r3  = 00007FFF h  
+r4  = 00000000 h  r5  = 00000000 h  r6  = 00000000 h  r7  = 00000000 h  
+r8  = 00000000 h  r9  = 00000000 h  r10 = 00000000 h  r11 = 00000000 h  
+r12 = 00000000 h  r13 = 00000000 h  r14 = 00000000 h  r15 = 00000000 h  
+
+FLAGS = 00000000 00000000 00000000 00000000 b
+PC = 8
+
+:t
+instruction = 01010011 01000000 00000000 00000001 b  type 1
+
+    meaning = mul mul      r3, r4r4r3
+
+r0  = 0000FFFF h  r1  = 000104CF h  r2  = 000004D0 h  r3  = 00000000 h  
+r4  = 00000000 h  r5  = 00000000 h  r6  = 00000000 h  r7  = 00000000 h  
+r8  = 00000000 h  r9  = 00000000 h  r10 = 00000000 h  r11 = 00000000 h  
+r12 = 00000000 h  r13 = 00000000 h  r14 = 00000000 h  r15 = 00000000 h  
+
+FLAGS = 00000000 00000000 00000000 00000000 b
+PC = 9
+
+:t
+instruction = 01100001 00100000 00000000 00000001 b  type 1
+
+    meaning = div div      r1, r2r2r1
+
+r0  = 0000FFFF h  r1  = 00000036 h  r2  = 000004D0 h  r3  = 00000000 h  
+r4  = 00000000 h  r5  = 00000000 h  r6  = 00000000 h  r7  = 00000000 h  
+r8  = 00000000 h  r9  = 00000000 h  r10 = 00000000 h  r11 = 00000000 h  
+r12 = 00000000 h  r13 = 00000000 h  r14 = 00000000 h  r15 = 00000000 h  
+
+FLAGS = 00000000 00000000 00000000 00000000 b
+PC = 10
+
+:t
+instruction = 01110011 00110000 00000000 00000001 b  type 1
+
+    meaning = cmp cmp      r3, r3r3r3
+
+r0  = 0000FFFF h  r1  = 00000036 h  r2  = 000004D0 h  r3  = 00000000 h  
+r4  = 00000000 h  r5  = 00000000 h  r6  = 00000000 h  r7  = 00000000 h  
+r8  = 00000000 h  r9  = 00000000 h  r10 = 00000000 h  r11 = 00000000 h  
+r12 = 00000000 h  r13 = 00000000 h  r14 = 00000000 h  r15 = 00000000 h  
+
+FLAGS = 00000000 00000000 00000000 00000010 b
+PC = 11
+
+:t
+instruction = 11000000 00000000 00000000 00110111 b  type 3
+
+    meaning = jeq jeq      13
+
+r0  = 0000FFFF h  r1  = 00000036 h  r2  = 000004D0 h  r3  = 00000000 h  
+r4  = 00000000 h  r5  = 00000000 h  r6  = 00000000 h  r7  = 00000000 h  
+r8  = 00000000 h  r9  = 00000000 h  r10 = 00000000 h  r11 = 00000000 h  
+r12 = 00000000 h  r13 = 00000000 h  r14 = 00000000 h  r15 = 00000000 h  
+
+FLAGS = 00000000 00000000 00000000 00000010 b
+PC = 13
+
+:t
+instruction = 10010100 00000011 11111111 11111110 b  type 2
+
+    meaning = out      r4r4out , #65535
+
+r0  = 0000FFFF h  r1  = 00000036 h  r2  = 000004D0 h  r3  = 00000000 h  
+r4  = 00000000 h  r5  = 00000000 h  r6  = 00000000 h  r7  = 00000000 h  
+r8  = 00000000 h  r9  = 00000000 h  r10 = 00000000 h  r11 = 00000000 h  
+r12 = 00000000 h  r13 = 00000000 h  r14 = 00000000 h  r15 = 00000000 h  
+
+FLAGS = 00000000 00000000 00000000 00000010 b
+PC = 14
+
+:t
+cpu idle, wait for IO process
+
+:t
+cpu idle, wait for IO process
+
+:t
+cpu idle, wait for IO process
+
+:t
+cpu idle, wait for IO process
+
+:t
+cpu idle, wait for IO process
+
+:t
+cpu idle, wait for IO process
+
+:t
+cpu idle, wait for IO process
+
+:t
+cpu idle, wait for IO process
+
+:t
+cpu idle, wait for IO process
+
+:t
+instruction = 01110000 00010000 00000000 00000001 b  type 1
+
+    meaning = cmp cmp      r0, r1r1r0
+
+r0  = 0000FFFF h  r1  = 00000036 h  r2  = 000004D0 h  r3  = 00000000 h  
+r4  = 00000000 h  r5  = 00000000 h  r6  = 00000000 h  r7  = 00000000 h  
+r8  = 00000000 h  r9  = 00000000 h  r10 = 00000000 h  r11 = 00000000 h  
+r12 = 00000000 h  r13 = 00000000 h  r14 = 00000000 h  r15 = 00000000 h  
+
+FLAGS = 00000000 00000000 00000000 00000000 b
+PC = 15
+
+:t
+instruction = 11000000 00000000 00000000 00100011 b  type 3
+
+    meaning = jeq jeq      8
+
+r0  = 0000FFFF h  r1  = 00000036 h  r2  = 000004D0 h  r3  = 00000000 h  
+r4  = 00000000 h  r5  = 00000000 h  r6  = 00000000 h  r7  = 00000000 h  
+r8  = 00000000 h  r9  = 00000000 h  r10 = 00000000 h  r11 = 00000000 h  
+r12 = 00000000 h  r13 = 00000000 h  r14 = 00000000 h  r15 = 00000000 h  
+
+FLAGS = 00000000 00000000 00000000 00000000 b
+PC = 16
+
+:t
+instruction = 00100100 00000000 00000000 00000010 b  type 2
+
+    meaning = mov      r4r4mov , #0
+
+r0  = 0000FFFF h  r1  = 00000036 h  r2  = 000004D0 h  r3  = 00000000 h  
+r4  = 00000000 h  r5  = 00000000 h  r6  = 00000000 h  r7  = 00000000 h  
+r8  = 00000000 h  r9  = 00000000 h  r10 = 00000000 h  r11 = 00000000 h  
+r12 = 00000000 h  r13 = 00000000 h  r14 = 00000000 h  r15 = 00000000 h  
+
+FLAGS = 00000000 00000000 00000000 00000000 b
+PC = 17
+
+:t
+instruction = 00100101 00000000 00000000 00101010 b  type 2
+
+    meaning = mov      r5r5mov , #10
+
+r0  = 0000FFFF h  r1  = 00000036 h  r2  = 000004D0 h  r3  = 00000000 h  
+r4  = 00000000 h  r5  = 0000000A h  r6  = 00000000 h  r7  = 00000000 h  
+r8  = 00000000 h  r9  = 00000000 h  r10 = 00000000 h  r11 = 00000000 h  
+r12 = 00000000 h  r13 = 00000000 h  r14 = 00000000 h  r15 = 00000000 h  
+
+FLAGS = 00000000 00000000 00000000 00000000 b
+PC = 18
+
+:t
+instruction = 10000011 00000000 00000011 10100010 b  type 2
+
+    meaning = in       r3r3in  , #232
+
+r0  = 0000FFFF h  r1  = 00000036 h  r2  = 000004D0 h  r3  = 00000029 h  
+r4  = 00000000 h  r5  = 0000000A h  r6  = 00000000 h  r7  = 00000000 h  
+r8  = 00000000 h  r9  = 00000000 h  r10 = 00000000 h  r11 = 00000000 h  
+r12 = 00000000 h  r13 = 00000000 h  r14 = 00000000 h  r15 = 00000000 h  
+
+FLAGS = 00000000 00000000 00000000 00000000 b
+PC = 19
+
+:t
+cpu idle, wait for IO process
+
+:t
+cpu idle, wait for IO process
+
+:t
+cpu idle, wait for IO process
+
+:t
+cpu idle, wait for IO process
+
+:t
+cpu idle, wait for IO process
+
+:t
+cpu idle, wait for IO process
+
+:t
+cpu idle, wait for IO process
+
+:t
+cpu idle, wait for IO process
+
+:t
+cpu idle, wait for IO process
+
+:t
+instruction = 00100110 00000000 00000000 00000110 b  type 2
+
+    meaning = mov      r6r6mov , #1
+
+r0  = 0000FFFF h  r1  = 00000036 h  r2  = 000004D0 h  r3  = 00000029 h  
+r4  = 00000000 h  r5  = 0000000A h  r6  = 00000001 h  r7  = 00000000 h  
+r8  = 00000000 h  r9  = 00000000 h  r10 = 00000000 h  r11 = 00000000 h  
+r12 = 00000000 h  r13 = 00000000 h  r14 = 00000000 h  r15 = 00000000 h  
+
+FLAGS = 00000000 00000000 00000000 00000000 b
+PC = 20
+
+:t
+instruction = 10010100 00000000 01000011 11100110 b  type 2
+
+    meaning = out      r4r4out , #4345
+
+r0  = 0000FFFF h  r1  = 00000036 h  r2  = 000004D0 h  r3  = 00000029 h  
+r4  = 00000000 h  r5  = 0000000A h  r6  = 00000001 h  r7  = 00000000 h  
+r8  = 00000000 h  r9  = 00000000 h  r10 = 00000000 h  r11 = 00000000 h  
+r12 = 00000000 h  r13 = 00000000 h  r14 = 00000000 h  r15 = 00000000 h  
+
+FLAGS = 00000000 00000000 00000000 00000000 b
+PC = 21
+
+:run
+
+
+cpu utilization :-
+
+        Waiting time :  [o] -terminated normally    [>] -terminated abnormally
+Average waiting time :  [v] -terminated normally    [<] -terminated abnormally
+Average wait time for all process : [*]
+           |
+pid 0      |o  0
+           |v  0.00 (0/1)
+pid 1      |oooooooooooooooooooooooooo  190
+           |vvvvvvvvvvvvvvvvvvvvvvvvvv  190.00 (190/1)
+           |
+Average    |*************   95.00
+           |
+    I/O    |zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz   260
+processing |
+ all cycle |aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   380
+ CPU/IDLE  |ccccccccccccccccccciiiiiiiiiiiiiiiiiiiiiiiiiiiiii   146/234
+           |
+
+           |
+    CPU    |uuuuuuuuuuuuuuuuuuu   38.42
+utilization|
+
+:status
+        process in memory :0  process(es)
+
+         memory allocated :0  byte(s)
+              free memory :8192  byte(s)
+             total memory :8192  byte(s)
+
+process in wait I/O queue :0  process(es)
+          scheduling mode :fcfs
+               trace mode :off
+
+r0  = 00000000 h  r1  = 00000000 h  r2  = 00000000 h  r3  = 00000000 h  
+r4  = 00000000 h  r5  = 00000000 h  r6  = 00000000 h  r7  = 00000000 h  
+r8  = 00000000 h  r9  = 00000000 h  r10 = 00000000 h  r11 = 00000000 h  
+r12 = 00000000 h  r13 = 00000000 h  r14 = 00000000 h  r15 = 00000000 h  
+
+current process :NULL                  p_id = NULL
+PC    = 0
+SP    = 8192
+FLAGS = 00000000 00000000 00000000 00000000 b
+
+:?
+*** no command_help for log file
+:quit
+>>> log file is deactivated 
+

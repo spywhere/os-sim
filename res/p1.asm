@@ -1,0 +1,27 @@
+mov    r3,#32767
+mov    r1,#65535
+mov    r2,#-1
+mov    r0,#-70000
+sub    r2,r10
+mov    r0,r1
+mov    r2,#1232
+add    r1,r2
+mul    r3,r4
+div    r1,r2
+cmp    r3,r3
+jeq    13
+in     r1,100
+out    65535,r4
+cmp    r0,r1
+jeq    8
+mov    r4,#0
+mov    r5,#10
+in     r3,232
+mov    r6,#1
+out    4345,r4
+cmp    r4,r5
+jeq    26
+add    r4,r6
+in     r0,232
+jmp    21
+halt

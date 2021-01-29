@@ -1,0 +1,43 @@
+Type 0 OPCODE
+OPCODE DC INST_TYPE
+[XXXX] [0000 0000 0000 0000 0000 0000 00] [00]
+
+Type 1 OPCODE R1,R2
+OPCODE R1 R2 DC INST_TYPE
+[XXXX] [XXXX] [XXXX] [0000 0000 0000 0000 00] [01]
+
+Type 2 OPCODE R1,IMME
+OPCODE R1 IMME(1'Com) INST_TYPE
+[XXXX] [XXXX] [XXXX XXXX XXXX XXXX XXXX XX] [10]
+
+Type 3 OPCODE Address
+OPCODE ADDR INST_TYPE
+[XXXX] [XXXX XXXX XXXX XXXX XXXX XXXX XX] [11]
+
+Type 0
+ - halt
+
+Type 1
+ - mov
+ - add
+ - sub
+ - mul
+ - div
+ - cmp (set flag)
+
+Type 2
+ - mov
+ - in
+ - out
+
+Type 3
+ - jmp
+ - jeq (if zero=1)
+ - jne (if zero=0)
+ - jpl (if signed=1)
+ - jneg (if signed=0)
+
+Port Info
+ - FILE = 0879 = Read file (null-terminated name from r11-r15)
+ - SCR = 1060 = Screen (print ASCII)
+ - DSCR = 1191 = Direct Screen (print num)
